@@ -17,7 +17,7 @@ public class Car {
     
     private String brand;
     private String model;
-    private int serialNum;
+    private String serialNum;
     private String color;
     private int year;
     private String engineNo;
@@ -26,7 +26,23 @@ public class Car {
     private String available;
     private String maintainenceExpiry;
     private String city;
-    private int modelNum;
+    private String modelNum;
+
+    public String getSerialNum() {
+        return serialNum;
+    }
+
+    public void setSerialNum(String serialNum) {
+        this.serialNum = serialNum;
+    }
+
+    public String getModelNum() {
+        return modelNum;
+    }
+
+    public void setModelNum(String modelNum) {
+        this.modelNum = modelNum;
+    }
 
     public String getAvailable() {
         return available;
@@ -41,22 +57,6 @@ public class Car {
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public int getModelNum() {
-        return modelNum;
-    }
-
-    public void setModelNum(int modelNum) {
-        this.modelNum = modelNum;
-    }
-
-    public int getSerialNum() {
-        return serialNum;
-    }
-
-    public void setSerialNum(int serialNum) {
-        this.serialNum = serialNum;
     }
 
     public String getMaintainenceExpiry() {

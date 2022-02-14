@@ -4,6 +4,11 @@
  */
 package ui;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.JOptionPane;
 import model.Car;
 import model.CarList;
 
@@ -96,11 +101,25 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        txtMaintainenceExpiry.setText("dd/MM/yyyy");
+
+        txtAvailable.setText("yes/no");
+        txtAvailable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAvailableActionPerformed(evt);
+            }
+        });
+
         title.setText("Create Car Record");
 
         color.setText("Color");
 
         btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -208,6 +227,138 @@ public class CreateJPanel extends javax.swing.JPanel {
     private void txtBrandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBrandActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBrandActionPerformed
+
+    private static boolean isAlphabetOrDigits(String str) {
+        return str.codePoints().allMatch(ch -> Character.isAlphabetic(ch) || Character.isDigit(ch));
+    }
+
+    private static boolean isAlphabet(String str) {
+        return str.codePoints().allMatch(ch -> Character.isAlphabetic(ch));
+    }
+     
+    public static boolean isDateValid(String date) {
+        try {
+            DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+            df.setLenient(false);
+            Date dt0 = df.parse(date);
+            Date dt1 = df.parse("01-01-1990");
+            String currentDate = df.format(new Date());
+            Date dt2 = df.parse(currentDate);
+            if(dt0.after(dt1) && dt0.before(dt2)){
+                return true;
+            } else {
+                return false;
+            }
+        } catch (ParseException e) {
+            return false;
+        }
+    }
+    
+    public static boolean isNumeric(String str) { 
+        try {  
+          Double.parseDouble(str);  
+          return true;
+        } catch(NumberFormatException e){  
+          return false;  
+        }  
+    }
+    
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+        boolean saveCar=true;
+        
+        if(txtBrand.getText().length() > 0 && isAlphabet(txtBrand.getText())){
+            car.setBrand(txtBrand.getText());
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter brand name in alphabets!");
+            saveCar=false;
+        }
+        
+        if(txtModel.getText().length() > 0 && isAlphabetOrDigits(txtModel.getText())){
+            car.setModel(txtModel.getText());
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter a valid model name!");
+            saveCar=false;
+        }
+        
+        if(txtColor.getText().length() > 0 && isAlphabet(txtColor.getText())){
+           car.setColor(txtColor.getText());
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter the color in alphabets!");
+            saveCar=false;
+        }
+               
+        if(txtYear.getText().length() > 0 && Integer.parseInt(txtYear.getText()) > 1989 && Integer.parseInt(txtYear.getText()) < 2023){
+            car.setYear(Integer.parseInt(txtYear.getText()));
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter the year between 1989 to 2023!");
+            saveCar=false;
+        }
+        
+        if(txtSeatNo.getText().length() > 0 && Integer.parseInt(txtSeatNo.getText()) > 1 && Integer.parseInt(txtSeatNo.getText()) < 10){
+            car.setSeatsNo(Integer.parseInt(txtSeatNo.getText()));
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter seat number between 2 to 10!");
+            saveCar=false;
+        }
+         
+        if(txtCity.getText().length() > 0 && isAlphabet(txtCity.getText())){
+           car.setCity(txtCity.getText());
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter the city in alphabets!");
+            saveCar=false;
+        }
+        
+        if(txtEngineNo.getText().length() > 0 && isAlphabetOrDigits(txtEngineNo.getText())){
+            car.setEngineNo(txtEngineNo.getText());
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter valid Engine no.!");
+            saveCar=false;
+        }
+
+        if(txtLicencePlate.getText().length() > 0 && isAlphabetOrDigits(txtLicencePlate.getText())){
+            car.setLicensePlate(txtLicencePlate.getText());
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter correct Licence plate number!");
+            saveCar=false;
+        }
+        
+        if(txtSerialNum.getText().length() > 0 && isAlphabetOrDigits(txtSerialNum.getText()) && txtSerialNum.getText().length() > 11 && txtSerialNum.getText().length() < 18){
+            car.setSerialNum(txtSerialNum.getText());
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter correct Serial number!");
+            saveCar=false;
+        }
+            
+        if(txtModelNum.getText().length() > 0 && isAlphabetOrDigits(txtModelNum.getText()) && txtModelNum.getText().length() == 17){
+            car.setModelNum(txtModelNum.getText());
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter correct Model number!");
+            saveCar=false;
+        }
+
+        if(txtAvailable.getText().length() > 0 && isAlphabet(txtAvailable.getText())){
+           car.setAvailable(txtAvailable.getText());
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter the availability in alphabets!");
+            saveCar=false;
+        }
+        
+        if(txtMaintainenceExpiry.getText().length() > 0 && isDateValid(txtMaintainenceExpiry.getText()) && txtMaintainenceExpiry.getText().length() == 10) {
+            car.setMaintainenceExpiry(txtMaintainenceExpiry.getText());
+        } else {
+            JOptionPane.showMessageDialog(null,"Please enter correct date and format!");
+            saveCar=false;
+        }
+
+        if(saveCar) {
+            JOptionPane.showMessageDialog(this, "Car saved successfully!!");
+        }
+    }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void txtAvailableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAvailableActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAvailableActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
