@@ -4,6 +4,9 @@
  */
 package ui;
 
+import model.Car;
+import model.CarList;
+
 /**
  *
  * @author apurvazawar
@@ -13,8 +16,14 @@ public class MainFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainFrame
      */
+    
+    Car car;
+    CarList history;
+    
     public MainFrame() {
         initComponents();
+        car = new Car();
+        history = new CarList();
     }
 
     /**
@@ -26,21 +35,89 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        splitPane = new javax.swing.JSplitPane();
+        ControlPane = new javax.swing.JPanel();
+        btnCreate = new javax.swing.JButton();
+        btnSearch = new javax.swing.JButton();
+        WorkPane = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnCreate.setText("Create");
+        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateActionPerformed(evt);
+            }
+        });
+
+        btnSearch.setText("Search");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ControlPaneLayout = new javax.swing.GroupLayout(ControlPane);
+        ControlPane.setLayout(ControlPaneLayout);
+        ControlPaneLayout.setHorizontalGroup(
+            ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ControlPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSearch)
+                    .addComponent(btnCreate))
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        ControlPaneLayout.setVerticalGroup(
+            ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ControlPaneLayout.createSequentialGroup()
+                .addGap(238, 238, 238)
+                .addComponent(btnCreate)
+                .addGap(52, 52, 52)
+                .addComponent(btnSearch)
+                .addContainerGap(333, Short.MAX_VALUE))
+        );
+
+        splitPane.setLeftComponent(ControlPane);
+
+        javax.swing.GroupLayout WorkPaneLayout = new javax.swing.GroupLayout(WorkPane);
+        WorkPane.setLayout(WorkPaneLayout);
+        WorkPaneLayout.setHorizontalGroup(
+            WorkPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 788, Short.MAX_VALUE)
+        );
+        WorkPaneLayout.setVerticalGroup(
+            WorkPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 681, Short.MAX_VALUE)
+        );
+
+        splitPane.setRightComponent(WorkPane);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 901, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(splitPane)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+        // TODO add your handling code here:
+        CreateJPanel createPanel = new CreateJPanel(car, history);
+        splitPane.setRightComponent(createPanel);
+    }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        SearchJPanel searchPanel = new SearchJPanel(car, history);
+        splitPane.setRightComponent(searchPanel);
+    }//GEN-LAST:event_btnSearchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +155,10 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel ControlPane;
+    private javax.swing.JPanel WorkPane;
+    private javax.swing.JButton btnCreate;
+    private javax.swing.JButton btnSearch;
+    private javax.swing.JSplitPane splitPane;
     // End of variables declaration//GEN-END:variables
 }
