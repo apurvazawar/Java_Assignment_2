@@ -84,7 +84,6 @@ public class CreateJPanel extends javax.swing.JPanel {
 
         licencePlate.setText("Licence Plate");
 
-        txtBrand.setText("jTextField1");
         txtBrand.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBrandActionPerformed(evt);
@@ -97,8 +96,6 @@ public class CreateJPanel extends javax.swing.JPanel {
                 txtModelActionPerformed(evt);
             }
         });
-
-        txtColor.setText("jTextField3");
 
         txtYear.setText("jTextField4");
 
