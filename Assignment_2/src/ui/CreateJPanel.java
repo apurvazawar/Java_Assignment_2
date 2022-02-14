@@ -90,30 +90,11 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtModel.setText("jTextField2");
         txtModel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtModelActionPerformed(evt);
             }
         });
-
-        txtYear.setText("jTextField4");
-
-        txtSeatNo.setText("jTextField5");
-
-        txtCity.setText("jTextField6");
-
-        txtEngineNo.setText("jTextField7");
-
-        txtLicencePlate.setText("jTextField8");
-
-        txtSerialNum.setText("jTextField9");
-
-        txtModelNum.setText("jTextField10");
-
-        txtMaintainenceExpiry.setText("jTextField11");
-
-        txtAvailable.setText("jTextField12");
 
         title.setText("Create Car Record");
 
