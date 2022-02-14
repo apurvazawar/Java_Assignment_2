@@ -16,13 +16,261 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="913" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="brand" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="seatNo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="serialNum" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="maintainenceExpiry" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="color" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtColor" pref="200" max="32767" attributes="0"/>
+                              <Component id="txtSeatNo" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="txtSerialNum" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtEngineNo" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="txtBrand" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="txtMaintainenceExpiry" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="engineNo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="386" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="licencePlate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="modelNum" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="available" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="city" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="year" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="model" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtModel" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="txtYear" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="txtCity" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="txtAvailable" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="txtModelNum" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="txtLicencePlate" min="-2" pref="200" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="101" pref="50" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="title" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="354" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="691" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Component id="title" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="brand" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="model" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtBrand" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtModel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="year" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtColor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtYear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="color" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="seatNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="city" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtSeatNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="engineNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEngineNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="licencePlate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtLicencePlate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="modelNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="serialNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtSerialNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtModelNum" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="maintainenceExpiry" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="available" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtMaintainenceExpiry" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtAvailable" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="50" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="brand">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Brand"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="seatNo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Seat No."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="city">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="City"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="engineNo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Engine No."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="modelNum">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Model No."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="model">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Model"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="year">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Year"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="available">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Available"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="maintainenceExpiry">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Maintainence Expiry"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="serialNum">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Serial No."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="licencePlate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Licence Plate"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtBrand">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBrandActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtModel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField2"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtModelActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtColor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtYear">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtSeatNo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCity">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField6"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtEngineNo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField7"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtLicencePlate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField8"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtSerialNum">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField9"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtModelNum">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField10"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtMaintainenceExpiry">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField11"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtAvailable">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="title">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Create Car Record"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="color">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Color"/>
+      </Properties>
+    </Component>
+  </SubComponents>
 </Form>

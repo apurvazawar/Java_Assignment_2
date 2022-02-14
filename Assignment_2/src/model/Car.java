@@ -23,14 +23,6 @@ public class Car {
     private String engineNo;
     private int seatsNo;
     private String licensePlate;
-    private String oName;
-    private int oTel;
-    private String oEmail;
-    private int oLicense;
-    private int oSSN;
-    private String oAddress;
-    private int warrantyYear;
-    private String photo;
     private String available;
     private String maintainenceExpiry;
     private String city;
@@ -129,70 +121,6 @@ public class Car {
 
     public void setSeatsNo(int seatsNo) {
         this.seatsNo = seatsNo;
-    }
-
-    public String getoName() {
-        return oName;
-    }
-
-    public void setoName(String oName) {
-        this.oName = oName;
-    }
-
-    public int getoTel() {
-        return oTel;
-    }
-
-    public void setoTel(int oTel) {
-        this.oTel = oTel;
-    }
-
-    public String getoEmail() {
-        return oEmail;
-    }
-
-    public void setoEmail(String oEmail) {
-        this.oEmail = oEmail;
-    }
-
-    public int getoLicense() {
-        return oLicense;
-    }
-
-    public void setoLicense(int oLicense) {
-        this.oLicense = oLicense;
-    }
-
-    public int getoSSN() {
-        return oSSN;
-    }
-
-    public void setoSSN(int oSSN) {
-        this.oSSN = oSSN;
-    }
-
-    public String getoAddress() {
-        return oAddress;
-    }
-
-    public void setoAddress(String oAddress) {
-        this.oAddress = oAddress;
-    }
-
-    public int getWarrantyYear() {
-        return warrantyYear;
-    }
-
-    public void setWarrantyYear(int warrantyYear) {
-        this.warrantyYear = warrantyYear;
-    }
-
-    public String getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
     }
 
 }
