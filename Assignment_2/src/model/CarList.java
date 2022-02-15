@@ -121,8 +121,23 @@ public class CarList {
     }
     
     //List all the car manufacturers used by (this) Uber.
+    public ArrayList<Car> filterByShowAllCars(){
+        ArrayList<Car> list = new ArrayList<>();
+        for(Car cd : history){
+            if(true){
+                list.add(cd);
+            }
+        }
+        return list;
+    }
     
     //When was the last time the fleet catalog was updated
+    public ArrayList<Car> filterByLastUpdate(){
+        ArrayList<Car> list = new ArrayList<>();
+        var lastElement = history.get(list.size()-1);
+        list.add(lastElement);
+        return list;
+    }
     
     //List all cars that are available in a given city.
     public ArrayList<Car> filterByCity(String city){
@@ -145,19 +160,6 @@ public class CarList {
         }
         JOptionPane.showMessageDialog(null,"Showing cars having expired certificate");
         return list;
-    }
-            
-    public ArrayList<Car> filterByShowAllCars(){
-     ArrayList<Car> list = new ArrayList<>();
-        for(Car cd : history){
-            if(true){
-                list.add(cd);
-            }
-        }
-        return list;
-    }      
-    
-    public void deleteCar(Car cd){
-        history.remove(cd);
-    }
+    }  
+
 }

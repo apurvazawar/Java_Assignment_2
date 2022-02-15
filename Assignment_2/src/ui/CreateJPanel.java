@@ -61,11 +61,13 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtLicencePlate = new javax.swing.JTextField();
         txtSerialNum = new javax.swing.JTextField();
         txtModelNum = new javax.swing.JTextField();
-        txtMaintainenceExpiry = new javax.swing.JTextField();
-        txtAvailable = new javax.swing.JTextField();
         title = new javax.swing.JLabel();
         color = new javax.swing.JLabel();
         btnSave = new javax.swing.JButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
 
         brand.setText("Brand");
 
@@ -101,15 +103,6 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtMaintainenceExpiry.setText("dd/MM/yyyy");
-
-        txtAvailable.setText("yes/no");
-        txtAvailable.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAvailableActionPerformed(evt);
-            }
-        });
-
         title.setText("Create Car Record");
 
         color.setText("Color");
@@ -120,6 +113,19 @@ public class CreateJPanel extends javax.swing.JPanel {
                 btnSaveActionPerformed(evt);
             }
         });
+
+        jCheckBox1.setText("Yes");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox2.setText("No");
+
+        jCheckBox3.setText("Yes");
+
+        jCheckBox4.setText("No");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -132,43 +138,50 @@ public class CreateJPanel extends javax.swing.JPanel {
                     .addComponent(title)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(brand)
-                            .addComponent(seatNo)
-                            .addComponent(serialNum)
-                            .addComponent(maintainenceExpiry)
-                            .addComponent(color))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtColor, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                                .addComponent(txtSeatNo))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtSerialNum, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtEngineNo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(txtMaintainenceExpiry, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(engineNo)
-                        .addGap(386, 386, 386)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(2, 2, 2)
+                                .addComponent(engineNo)
+                                .addGap(386, 386, 386)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(licencePlate)
-                                    .addComponent(modelNum)
-                                    .addComponent(available)
-                                    .addComponent(city)))
-                            .addComponent(year)
-                            .addComponent(model))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(2, 2, 2)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(licencePlate)
+                                            .addComponent(modelNum)
+                                            .addComponent(available)
+                                            .addComponent(city)))
+                                    .addComponent(year)
+                                    .addComponent(model)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(brand)
+                                    .addComponent(seatNo)
+                                    .addComponent(serialNum)
+                                    .addComponent(maintainenceExpiry)
+                                    .addComponent(color))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtColor)
+                                    .addComponent(txtSeatNo)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(txtSerialNum, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtEngineNo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jCheckBox1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jCheckBox2)))))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtModel, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtYear, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtModelNum, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtLicencePlate, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtLicencePlate, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jCheckBox3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jCheckBox4)))))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -208,13 +221,15 @@ public class CreateJPanel extends javax.swing.JPanel {
                     .addComponent(serialNum)
                     .addComponent(txtSerialNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtModelNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
+                .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(maintainenceExpiry)
                     .addComponent(available)
-                    .addComponent(txtMaintainenceExpiry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
+                    .addComponent(jCheckBox1)
+                    .addComponent(jCheckBox2)
+                    .addComponent(jCheckBox3)
+                    .addComponent(jCheckBox4))
+                .addGap(58, 58, 58)
                 .addComponent(btnSave)
                 .addContainerGap(30, Short.MAX_VALUE))
         );
@@ -333,32 +348,61 @@ public class CreateJPanel extends javax.swing.JPanel {
         if(txtModelNum.getText().length() > 0 && isAlphabetOrDigits(txtModelNum.getText()) && txtModelNum.getText().length() == 17){
             car.setModelNum(txtModelNum.getText());
         } else {
-            JOptionPane.showMessageDialog(null,"Please enter correct Model number!");
-            saveCar=false;
-        }
-
-        if(txtAvailable.getText().length() > 0 && isAlphabet(txtAvailable.getText())){
-           car.setAvailable(txtAvailable.getText());
-        } else {
-            JOptionPane.showMessageDialog(null,"Please enter the availability in alphabets!");
+            JOptionPane.showMessageDialog(null,"Please enter 17 digit Model number!");
             saveCar=false;
         }
         
-        if(txtMaintainenceExpiry.getText().length() > 0 && isDateValid(txtMaintainenceExpiry.getText()) && txtMaintainenceExpiry.getText().length() == 10) {
-            car.setMaintainenceExpiry(txtMaintainenceExpiry.getText());
+        Boolean expiryYes = jCheckBox1.isSelected();
+        Boolean expiryNo = jCheckBox2.isSelected();
+        
+        if(expiryYes == true && expiryNo == false){
+            car.setMaintainenceExpiry("yes");
         } else {
-            JOptionPane.showMessageDialog(null,"Please enter correct date and format!");
+            car.setMaintainenceExpiry("no");
+        }
+        
+        if((expiryYes == false && expiryNo == false) || (expiryYes == true && expiryNo == true)) {
+            JOptionPane.showMessageDialog(null,"Please select the Maintainence Expiry");
+            saveCar=false;
+        }
+        
+        Boolean availableYes = jCheckBox3.isSelected();
+        Boolean availableNo = jCheckBox4.isSelected();
+        
+        if(availableYes == true && availableNo == false){
+            car.setAvailable("yes");
+        } else {
+            car.setAvailable("no");
+        }
+
+        if((availableYes == false && availableNo == false) || (availableYes == true && availableNo == true)) {
+            JOptionPane.showMessageDialog(null,"Please select the availability");
             saveCar=false;
         }
 
         if(saveCar) {
             JOptionPane.showMessageDialog(this, "Car saved successfully!!");
+            
+            txtBrand.setText("");
+            txtModel.setText("");
+            txtColor.setText("");
+            txtYear.setText("");
+            txtSeatNo.setText("");
+            txtCity.setText("");
+            txtEngineNo.setText("");
+            txtLicencePlate.setText("");
+            txtSerialNum.setText("");
+            txtModelNum.setText("");
+            jCheckBox1.setSelected(false);
+            jCheckBox2.setSelected(false);
+            jCheckBox3.setSelected(false);
+            jCheckBox4.setSelected(false);
         }
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void txtAvailableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAvailableActionPerformed
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAvailableActionPerformed
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -368,6 +412,10 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel city;
     private javax.swing.JLabel color;
     private javax.swing.JLabel engineNo;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JLabel licencePlate;
     private javax.swing.JLabel maintainenceExpiry;
     private javax.swing.JLabel model;
@@ -375,13 +423,11 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel seatNo;
     private javax.swing.JLabel serialNum;
     private javax.swing.JLabel title;
-    private javax.swing.JTextField txtAvailable;
     private javax.swing.JTextField txtBrand;
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtColor;
     private javax.swing.JTextField txtEngineNo;
     private javax.swing.JTextField txtLicencePlate;
-    private javax.swing.JTextField txtMaintainenceExpiry;
     private javax.swing.JTextField txtModel;
     private javax.swing.JTextField txtModelNum;
     private javax.swing.JTextField txtSeatNo;
