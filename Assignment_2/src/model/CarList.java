@@ -4,7 +4,10 @@
  */
 package model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -29,6 +32,9 @@ public class CarList {
      
     public Car addNewCar(){
         Car newCar = new Car();
+        DateFormat formatter = new SimpleDateFormat("EEEE, dd MMMM yyyy, hh:mm:ss.SSS a");
+        String today = formatter.format(new Date());
+        newCar.setTimestamp(today);
         history.add(newCar);
         return newCar;
     }
@@ -134,8 +140,11 @@ public class CarList {
     //When was the last time the fleet catalog was updated
     public ArrayList<Car> filterByLastUpdate(){
         ArrayList<Car> list = new ArrayList<>();
-        var lastElement = history.get(list.size()-1);
-        list.add(lastElement);
+        if(!history.isEmpty()) {
+            var lastElement = history.get(history.size() - 1);
+            list.add(lastElement);
+            JOptionPane.showMessageDialog(null,"The fleet was updated at " + lastElement.getTimestamp());
+        }
         return list;
     }
     

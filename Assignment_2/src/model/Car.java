@@ -27,6 +27,15 @@ public class Car {
     private String maintainenceExpiry;
     private String city;
     private String modelNum;
+    private String timestamp;
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public String getSerialNum() {
         return serialNum;

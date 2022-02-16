@@ -39,6 +39,7 @@ public class MainFrame extends javax.swing.JFrame {
         ControlPane = new javax.swing.JPanel();
         btnCreate = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
+        btnView = new javax.swing.JButton();
         WorkPane = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,25 +58,36 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        btnView.setText("View");
+        btnView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout ControlPaneLayout = new javax.swing.GroupLayout(ControlPane);
         ControlPane.setLayout(ControlPaneLayout);
         ControlPaneLayout.setHorizontalGroup(
             ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ControlPaneLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSearch)
-                    .addComponent(btnCreate))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGroup(ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCreate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
         ControlPaneLayout.setVerticalGroup(
             ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ControlPaneLayout.createSequentialGroup()
-                .addGap(238, 238, 238)
+                .addGap(174, 174, 174)
                 .addComponent(btnCreate)
-                .addGap(52, 52, 52)
+                .addGap(50, 50, 50)
+                .addComponent(btnView)
+                .addGap(50, 50, 50)
                 .addComponent(btnSearch)
-                .addContainerGap(333, Short.MAX_VALUE))
+                .addContainerGap(320, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(ControlPane);
@@ -119,6 +131,12 @@ public class MainFrame extends javax.swing.JFrame {
         splitPane.setRightComponent(searchPanel);
     }//GEN-LAST:event_btnSearchActionPerformed
 
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        // TODO add your handling code here:
+        ViewJPanel viewPanel = new ViewJPanel(history);
+        splitPane.setRightComponent(viewPanel);
+    }//GEN-LAST:event_btnViewActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -159,6 +177,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel WorkPane;
     private javax.swing.JButton btnCreate;
     private javax.swing.JButton btnSearch;
+    private javax.swing.JButton btnView;
     private javax.swing.JSplitPane splitPane;
     // End of variables declaration//GEN-END:variables
 }

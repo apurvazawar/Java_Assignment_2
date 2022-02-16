@@ -135,17 +135,17 @@ public class SearchJPanel extends javax.swing.JPanel {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Attributes", "Value"
+                "Brand", "Model", "Color", "Year", "Seats", "City", "Engine No.", "Licence plate", "Serial No.", "Model No.", "Maintainence Expiry", "Available"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -155,9 +155,29 @@ public class SearchJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(0).setPreferredWidth(200);
+            jTable1.getColumnModel().getColumn(0).setPreferredWidth(70);
             jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setPreferredWidth(200);
+            jTable1.getColumnModel().getColumn(1).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(2).setResizable(false);
+            jTable1.getColumnModel().getColumn(2).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(3).setResizable(false);
+            jTable1.getColumnModel().getColumn(3).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(4).setResizable(false);
+            jTable1.getColumnModel().getColumn(4).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(5).setResizable(false);
+            jTable1.getColumnModel().getColumn(5).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(6).setResizable(false);
+            jTable1.getColumnModel().getColumn(6).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(7).setResizable(false);
+            jTable1.getColumnModel().getColumn(7).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(8).setResizable(false);
+            jTable1.getColumnModel().getColumn(8).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(9).setResizable(false);
+            jTable1.getColumnModel().getColumn(9).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(10).setResizable(false);
+            jTable1.getColumnModel().getColumn(10).setPreferredWidth(70);
+            jTable1.getColumnModel().getColumn(11).setResizable(false);
+            jTable1.getColumnModel().getColumn(11).setPreferredWidth(70);
         }
 
         Output.setText("Output");
@@ -168,58 +188,60 @@ public class SearchJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLastUpdated)
-                    .addComponent(btnFilterBySeat)
-                    .addComponent(btnFilterByYear)
-                    .addComponent(btnFilterByBrand)
-                    .addComponent(title)
-                    .addComponent(btnFirstAvailableCar)
-                    .addComponent(btnCurrentAval)
-                    .addComponent(btnFilterByModelNum)
-                    .addComponent(btnFilterByManufacturer)
-                    .addComponent(btnFilterBySerial)
-                    .addComponent(btnFilterByCity)
-                    .addComponent(btnAllRecords))
-                .addGap(100, 100, 100)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1)
                     .addComponent(Output)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(title)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnFirstAvailableCar)
+                            .addComponent(btnFilterByYear)
+                            .addComponent(btnFilterByModelNum)
+                            .addComponent(btnFilterByCity))
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnCurrentAval)
+                                    .addComponent(btnFilterBySeat)
+                                    .addComponent(btnFilterByManufacturer))
+                                .addGap(50, 50, 50)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnLastUpdated)
+                                    .addComponent(btnFilterBySerial)
+                                    .addComponent(btnFilterByBrand)))
+                            .addComponent(btnAllRecords))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(40, 40, 40)
+                .addComponent(title)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(title)
-                    .addComponent(Output))
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnFirstAvailableCar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCurrentAval)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnFilterByBrand)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnFilterByYear)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnFilterBySeat)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnFilterBySerial)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnFilterByModelNum)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnFilterByManufacturer)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnLastUpdated)
-                        .addGap(21, 21, 21)
-                        .addComponent(btnFilterByCity)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAllRecords))
-                    .addComponent(jScrollPane1))
-                .addContainerGap(76, Short.MAX_VALUE))
+                    .addComponent(btnFirstAvailableCar)
+                    .addComponent(btnCurrentAval)
+                    .addComponent(btnFilterByBrand))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnFilterByYear)
+                    .addComponent(btnFilterBySeat)
+                    .addComponent(btnFilterBySerial))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnFilterByModelNum)
+                    .addComponent(btnFilterByManufacturer)
+                    .addComponent(btnLastUpdated))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnFilterByCity)
+                    .addComponent(btnAllRecords))
+                .addGap(50, 50, 50)
+                .addComponent(Output)
+                .addGap(45, 45, 45)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(267, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -233,7 +255,6 @@ public class SearchJPanel extends javax.swing.JPanel {
     private void btnCurrentAvalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCurrentAvalActionPerformed
         // TODO add your handling code here:
         ArrayList<Car> list = history.filterByAvailability();
-        System.out.print(list);
         populateTable(list);
     }//GEN-LAST:event_btnCurrentAvalActionPerformed
 
@@ -242,7 +263,6 @@ public class SearchJPanel extends javax.swing.JPanel {
         String brand1 = null;
         String brand = JOptionPane.showInputDialog(null,"Enter the car brand", brand1);
         ArrayList<Car> list = history.filterByBrand(brand);
-        System.out.print(list);
         populateTable(list);
     }//GEN-LAST:event_btnFilterByBrandActionPerformed
 
