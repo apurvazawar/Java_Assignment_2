@@ -313,9 +313,8 @@ public class SearchJPanel extends javax.swing.JPanel {
 
     private void btnLastUpdatedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLastUpdatedActionPerformed
         // TODO add your handling code here:
-        ArrayList<Car> list = history.filterByLastUpdate();
-        System.out.print(list);
-        populateTable(list);
+        String lastUpdated = history.filterByLastUpdate();
+        JOptionPane.showMessageDialog(null,"The fleet was updated at " + lastUpdated);
     }//GEN-LAST:event_btnLastUpdatedActionPerformed
 
     private void btnFilterByCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFilterByCityActionPerformed
@@ -359,7 +358,6 @@ public class SearchJPanel extends javax.swing.JPanel {
                row[11] = "No";
            }
            row[11] = cd.getAvailable();
-           System.out.print(row);
            model.addRow(row);
 
         }

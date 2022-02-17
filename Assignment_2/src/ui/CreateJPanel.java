@@ -29,6 +29,21 @@ public class CreateJPanel extends javax.swing.JPanel {
         initComponents();
         this.car = car;
         this.history = history;
+        
+        txtBrand.setText("Mustang");
+        txtModel.setText("convertible");
+        txtColor.setText("black");
+        txtYear.setText("2014");
+        txtSeatNo.setText("4");
+        txtCity.setText("Boston");
+        txtEngineNo.setText("123qwe");
+        txtLicencePlate.setText("qaw212");
+        txtSerialNum.setText("2222");
+        txtModelNum.setText("1111");
+        jCheckBox1.setSelected(true);
+        jCheckBox2.setSelected(false);
+        jCheckBox3.setSelected(true);
+        jCheckBox4.setSelected(false);
     }
 
     /**
@@ -280,8 +295,8 @@ public class CreateJPanel extends javax.swing.JPanel {
     
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
-        boolean saveCar=true;
-        Car carDetails = history.addNewCar();
+        boolean saveCar = true;
+        Car carDetails = new Car();
         
         if(txtBrand.getText().length() > 0 && isAlphabet(txtBrand.getText())){
             carDetails.setBrand(txtBrand.getText());
@@ -339,15 +354,15 @@ public class CreateJPanel extends javax.swing.JPanel {
             saveCar=false;
         }
         
-        if(txtSerialNum.getText().length() > 0 && isAlphabetOrDigits(txtSerialNum.getText()) && txtSerialNum.getText().length() > 11 && txtSerialNum.getText().length() < 18){
-            car.setSerialNum(txtSerialNum.getText());
+        if(txtSerialNum.getText().length() > 0 && isAlphabetOrDigits(txtSerialNum.getText()) && txtSerialNum.getText().length() > 2 && txtSerialNum.getText().length() < 5){
+            carDetails.setSerialNum(txtSerialNum.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter correct Serial number!");
             saveCar=false;
         }
             
-        if(txtModelNum.getText().length() > 0 && isAlphabetOrDigits(txtModelNum.getText()) && txtModelNum.getText().length() == 17){
-            car.setModelNum(txtModelNum.getText());
+        if(txtModelNum.getText().length() > 0 && isAlphabetOrDigits(txtModelNum.getText()) && txtModelNum.getText().length() == 4){
+            carDetails.setModelNum(txtModelNum.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter 17 digit Model number!");
             saveCar=false;
@@ -381,7 +396,8 @@ public class CreateJPanel extends javax.swing.JPanel {
             saveCar=false;
         }
 
-        if(saveCar) {
+        if(saveCar) {  
+            history.addNewCar(true, 0, carDetails);
             JOptionPane.showMessageDialog(this, "Car saved successfully!!");
             
             txtBrand.setText("");

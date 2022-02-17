@@ -7,7 +7,6 @@ package ui;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -18,7 +17,7 @@ import model.CarList;
  *
  * @author apurvazawar
  */
-public class ViewJPanel extends javax.swing.JPanel {
+public class UpdateJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ViewJPanel
@@ -26,7 +25,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     
     CarList history;
     
-    public ViewJPanel(CarList history) {
+    public UpdateJPanel(CarList history) {
         initComponents();
         this.history = history; 
         populateCarList();
@@ -306,7 +305,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     }
     
     public static boolean isNumeric(String str) { 
-        try {  
+        try { 
           Double.parseDouble(str);  
           return true;
         } catch(NumberFormatException e){  
@@ -317,73 +316,91 @@ public class ViewJPanel extends javax.swing.JPanel {
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
         boolean saveCar=true;
-        Car carDetails = history.addNewCar();
+        
+        DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+        
+        int selectedRowIndex = jTable1.getSelectedRow();
+
+//        String brand = tableModel.getValueAt(selectedRowIndex, 0).toString();
+//        String modelName = tableModel.getValueAt(selectedRowIndex, 1).toString();
+//        String color = tableModel.getValueAt(selectedRowIndex, 2).toString();
+//        String year = tableModel.getValueAt(selectedRowIndex, 3).toString();
+//        String seatNo = tableModel.getValueAt(selectedRowIndex, 4).toString();
+//        String city = tableModel.getValueAt(selectedRowIndex, 5).toString();
+//        String engineNo = tableModel.getValueAt(selectedRowIndex, 6).toString();
+//        String licensePlate = tableModel.getValueAt(selectedRowIndex, 7).toString();
+//        String serialNum = tableModel.getValueAt(selectedRowIndex, 8).toString();
+//        String modelNum = tableModel.getValueAt(selectedRowIndex, 9).toString();
+//        String maintainenceExpiry = tableModel.getValueAt(selectedRowIndex, 10).toString();
+//        String available = tableModel.getValueAt(selectedRowIndex, 11).toString();
+        
+        Car cd = new Car();
         
         if(txtBrand.getText().length() > 0 && isAlphabet(txtBrand.getText())){
-            carDetails.setBrand(txtBrand.getText());
+            cd.setBrand(txtBrand.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter brand name in alphabets!");
             saveCar=false;
         }
         
         if(txtModel.getText().length() > 0 && isAlphabetOrDigits(txtModel.getText())){
-            carDetails.setModel(txtModel.getText());
+            cd.setModel(txtModel.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter a valid model name!");
             saveCar=false;
         }
         
         if(txtColor.getText().length() > 0 && isAlphabet(txtColor.getText())){
-           carDetails.setColor(txtColor.getText());
+           cd.setColor(txtColor.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter the color in alphabets!");
             saveCar=false;
         }
                
         if(txtYear.getText().length() > 0 && Integer.parseInt(txtYear.getText()) > 1989 && Integer.parseInt(txtYear.getText()) < 2023){
-            carDetails.setYear(Integer.parseInt(txtYear.getText()));
+            cd.setYear(Integer.parseInt(txtYear.getText()));
         } else {
             JOptionPane.showMessageDialog(null,"Please enter the year between 1989 to 2023!");
             saveCar=false;
         }
         
         if(txtSeatNo.getText().length() > 0 && Integer.parseInt(txtSeatNo.getText()) > 1 && Integer.parseInt(txtSeatNo.getText()) < 10){
-            carDetails.setSeatsNo(Integer.parseInt(txtSeatNo.getText()));
+            cd.setSeatsNo(Integer.parseInt(txtSeatNo.getText()));
         } else {
             JOptionPane.showMessageDialog(null,"Please enter seat number between 2 to 10!");
             saveCar=false;
         }
          
         if(txtCity.getText().length() > 0 && isAlphabet(txtCity.getText())){
-           carDetails.setCity(txtCity.getText());
+           cd.setCity(txtCity.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter the city in alphabets!");
             saveCar=false;
         }
         
         if(txtEngineNo.getText().length() > 0 && isAlphabetOrDigits(txtEngineNo.getText())){
-            carDetails.setEngineNo(txtEngineNo.getText());
+            cd.setEngineNo(txtEngineNo.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter valid Engine no.!");
             saveCar=false;
         }
 
         if(txtLicencePlate.getText().length() > 0 && isAlphabetOrDigits(txtLicencePlate.getText())){
-            carDetails.setLicensePlate(txtLicencePlate.getText());
+            cd.setLicensePlate(txtLicencePlate.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter correct Licence plate number!");
             saveCar=false;
         }
         
         if(txtSerialNum.getText().length() > 0 && isAlphabetOrDigits(txtSerialNum.getText()) && txtSerialNum.getText().length() > 2 && txtSerialNum.getText().length() < 5){
-            carDetails.setSerialNum(txtSerialNum.getText());
+            cd.setSerialNum(txtSerialNum.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter correct Serial number!");
             saveCar=false;
         }
             
         if(txtModelNum.getText().length() > 0 && isAlphabetOrDigits(txtModelNum.getText()) && txtModelNum.getText().length() == 4){
-            carDetails.setModelNum(txtModelNum.getText());
+            cd.setModelNum(txtModelNum.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter 17 digit Model number!");
             saveCar=false;
@@ -393,9 +410,9 @@ public class ViewJPanel extends javax.swing.JPanel {
         Boolean expiryNo = jCheckBox2.isSelected();
         
         if(expiryYes == true && expiryNo == false){
-            carDetails.setMaintainenceExpiry("yes");
+            cd.setMaintainenceExpiry("yes");
         } else {
-            carDetails.setMaintainenceExpiry("no");
+            cd.setMaintainenceExpiry("no");
         }
         
         if((expiryYes == false && expiryNo == false) || (expiryYes == true && expiryNo == true)) {
@@ -407,9 +424,9 @@ public class ViewJPanel extends javax.swing.JPanel {
         Boolean availableNo = jCheckBox4.isSelected();
         
         if(availableYes == true && availableNo == false){
-            carDetails.setAvailable("yes");
+            cd.setAvailable("yes");
         } else {
-            carDetails.setAvailable("no");
+            cd.setAvailable("no");
         }
 
         if((availableYes == false && availableNo == false) || (availableYes == true && availableNo == true)) {
@@ -418,7 +435,10 @@ public class ViewJPanel extends javax.swing.JPanel {
         }
 
         if(saveCar) {
-            JOptionPane.showMessageDialog(this, "Car saved successfully!!");
+            history.addNewCar(false, selectedRowIndex, cd);
+            JOptionPane.showMessageDialog(this, "Car updated successfully!!");
+
+            populateCarList();
             
             txtBrand.setText("");
             txtModel.setText("");
@@ -449,24 +469,36 @@ public class ViewJPanel extends javax.swing.JPanel {
             return;
         }
         
-        DefaultTableModel CarModel = (DefaultTableModel) jTable1.getModel();
-        Car selectedCar = (Car) CarModel.getValueAt(selectedRowIndex, 0);
+        DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
         
-        txtBrand.setText(selectedCar.getBrand());
-        txtModel.setText(selectedCar.getModel());
-        txtColor.setText(selectedCar.getColor());
-        txtYear.setText(String.valueOf(selectedCar.getYear()));
-        txtSeatNo.setText(String.valueOf(selectedCar.getSeatsNo()));
-        txtCity.setText(selectedCar.getCity());
-        txtEngineNo.setText(selectedCar.getEngineNo());
-        txtLicencePlate.setText(selectedCar.getLicensePlate());
-        txtSerialNum.setText(selectedCar.getSerialNum());
-        txtModelNum.setText(selectedCar.getModelNum());
-        if(selectedCar.getAvailable().equalsIgnoreCase("yes")){
+        String brandName = tableModel.getValueAt(selectedRowIndex, 0).toString();
+        String modelName = tableModel.getValueAt(selectedRowIndex, 1).toString();
+        String colorTx = tableModel.getValueAt(selectedRowIndex, 2).toString();
+        String yearTx = tableModel.getValueAt(selectedRowIndex, 3).toString();
+        String seatNoTx = tableModel.getValueAt(selectedRowIndex, 4).toString();
+        String cityTx = tableModel.getValueAt(selectedRowIndex, 5).toString();
+        String engineNoTx = tableModel.getValueAt(selectedRowIndex, 6).toString();
+        String licensePlateTx = tableModel.getValueAt(selectedRowIndex, 7).toString();
+        String serialNumTx = tableModel.getValueAt(selectedRowIndex, 8).toString();
+        String modelNumTx = tableModel.getValueAt(selectedRowIndex, 9).toString();
+        String maintainenceExpiryChkBx = tableModel.getValueAt(selectedRowIndex, 10).toString();
+        String availableChkBx = tableModel.getValueAt(selectedRowIndex, 11).toString();
+        
+        txtBrand.setText(brandName);
+        txtModel.setText(modelName);
+        txtColor.setText(colorTx);
+        txtYear.setText(yearTx);
+        txtSeatNo.setText(seatNoTx);
+        txtCity.setText(cityTx);
+        txtEngineNo.setText(engineNoTx);
+        txtLicencePlate.setText(licensePlateTx);
+        txtSerialNum.setText(serialNumTx);
+        txtModelNum.setText(modelNumTx);
+        if(maintainenceExpiryChkBx.equalsIgnoreCase("yes")){
             jCheckBox1.setSelected(true);
             jCheckBox2.setSelected(false);
         }
-        if(selectedCar.getAvailable().equalsIgnoreCase("yes")){
+        if(availableChkBx.equalsIgnoreCase("yes")){
             jCheckBox3.setSelected(true);
             jCheckBox4.setSelected(false);
         }
@@ -474,11 +506,11 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     private void populateCarList() {
         
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        model.setRowCount(0);
+        DefaultTableModel carModel = (DefaultTableModel) jTable1.getModel();
+        carModel.setRowCount(0);
         
         for(Car cd: history.getHistory()){
-      
+         
            Object[] row = new Object[12];
            row[0] = cd.getBrand();
            row[1] = cd.getModel();
@@ -490,16 +522,17 @@ public class ViewJPanel extends javax.swing.JPanel {
            row[7] = cd.getLicensePlate();
            row[8] = cd.getSerialNum();
            row[9] = cd.getModelNum();
-           row[10] = cd.getMaintainenceExpiry();
-           if(cd.getAvailable() == "yes"){
+           if("yes".equals(cd.getMaintainenceExpiry())){
+               row[10] = "Yes";
+           }else{
+               row[10] = "No";
+           }
+           if("yes".equals(cd.getAvailable())){
                row[11] = "Yes";
            }else{
                row[11] = "No";
            }
-           row[11] = cd.getAvailable();
-           System.out.print(row);
-           model.addRow(row);
-
+           carModel.addRow(row);
         }
     }
 

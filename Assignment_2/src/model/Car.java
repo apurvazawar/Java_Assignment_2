@@ -3,12 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package model;
-
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import javax.swing.JOptionPane;
 /**
  *
  * @author apurvazawar
@@ -17,7 +11,6 @@ public class Car {
     
     private String brand;
     private String model;
-    private String serialNum;
     private String color;
     private int year;
     private String engineNo;
@@ -26,6 +19,7 @@ public class Car {
     private String available;
     private String maintainenceExpiry;
     private String city;
+    private String serialNum;
     private String modelNum;
     private String timestamp;
 
@@ -60,6 +54,7 @@ public class Car {
     public void setAvailable(String available) {
         this.available = available;
     }
+    
     public String getCity() {
         return city;
     }

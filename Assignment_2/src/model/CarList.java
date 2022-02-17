@@ -17,7 +17,8 @@ import javax.swing.JOptionPane;
 public class CarList {
     
     private ArrayList<Car> history;
-    
+    private String lastUpdated;
+
     public CarList(){
         this.history = new ArrayList<>();
     }
@@ -30,13 +31,17 @@ public class CarList {
         this.history = history;
     }
      
-    public Car addNewCar(){
-        Car newCar = new Car();
+    public Car addNewCar(boolean isNewCar, int selectedRow, Car carRecord){  
         DateFormat formatter = new SimpleDateFormat("EEEE, dd MMMM yyyy, hh:mm:ss.SSS a");
         String today = formatter.format(new Date());
-        newCar.setTimestamp(today);
-        history.add(newCar);
-        return newCar;
+        carRecord.setTimestamp(today);
+        lastUpdated = today;
+        if(isNewCar){
+            history.add(carRecord);
+        } else {
+            history.set(selectedRow, carRecord);
+        }
+        return carRecord;
     }
     
     //Find the first available passenger car.
@@ -138,14 +143,8 @@ public class CarList {
     }
     
     //When was the last time the fleet catalog was updated
-    public ArrayList<Car> filterByLastUpdate(){
-        ArrayList<Car> list = new ArrayList<>();
-        if(!history.isEmpty()) {
-            var lastElement = history.get(history.size() - 1);
-            list.add(lastElement);
-            JOptionPane.showMessageDialog(null,"The fleet was updated at " + lastElement.getTimestamp());
-        }
-        return list;
+    public String filterByLastUpdate(){
+        return lastUpdated;
     }
     
     //List all cars that are available in a given city.
@@ -169,6 +168,6 @@ public class CarList {
         }
         JOptionPane.showMessageDialog(null,"Showing cars having expired certificate");
         return list;
-    }  
+    }
 
 }
