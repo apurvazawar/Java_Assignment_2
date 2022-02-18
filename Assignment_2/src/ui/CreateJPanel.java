@@ -52,12 +52,12 @@ public class CreateJPanel extends javax.swing.JPanel {
         newCar1.setColor("Red");
         newCar1.setEngineNo("512FWB");
         newCar1.setLicensePlate("512FWB");
-        newCar1.setMaintainenceExpiry("Yes");
+        newCar1.setMaintainenceExpiry("yes");
         newCar1.setYear(1999);
         newCar1.setModelNum("ABQ11111111PPPPPP");
         newCar1.setSeatsNo(4);
         newCar1.setSerialNum("QWERTYUIOPASDFG");
-        newCar1.setAvailable("No");
+        newCar1.setAvailable("no");
         history.addNewCar(true, 0, newCar1);
         
         Car newCar2 = new Car();
@@ -67,27 +67,27 @@ public class CreateJPanel extends javax.swing.JPanel {
         newCar2.setColor("Blue");
         newCar2.setEngineNo("EBEJ9893NDN");
         newCar2.setLicensePlate("786HJK");
-        newCar2.setMaintainenceExpiry("YES");
+        newCar2.setMaintainenceExpiry("yes");
         newCar2.setYear(2020);
         newCar2.setModelNum("ASDFGHJKLPOIU0987");
         newCar2.setSeatsNo(7);
         newCar2.setSerialNum("1QWER56YFGHNSL2");
-        newCar2.setAvailable("YES");
+        newCar2.setAvailable("yes");
         history.addNewCar(true, 0, newCar2);
         
         Car newCar3 = new Car();
         newCar3.setBrand("Mercedes");
-        newCar3.setModel("E-class");
+        newCar3.setModel("Eclass");
         newCar3.setCity("Chicago");
         newCar3.setColor("Black");
         newCar3.setEngineNo("DNU3ENH23NE");
         newCar3.setLicensePlate("IOP123");
-        newCar3.setMaintainenceExpiry("YES");
+        newCar3.setMaintainenceExpiry("yes");
         newCar3.setYear(1997);
         newCar3.setModelNum("WSDY76HNKLE34HNK9");
         newCar3.setSeatsNo(4);
         newCar3.setSerialNum("WDGY7UJK4TGD32O");
-        newCar3.setAvailable("YES");
+        newCar3.setAvailable("yes");
         history.addNewCar(true, 0, newCar3);
     }
 
@@ -129,31 +129,64 @@ public class CreateJPanel extends javax.swing.JPanel {
         jCheckBox3 = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
 
-        setBackground(new java.awt.Color(102, 102, 102));
+        setBackground(new java.awt.Color(22, 36, 63));
         setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.gray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.lightGray));
         setForeground(new java.awt.Color(102, 102, 102));
         setToolTipText("");
 
+        brand.setBackground(new java.awt.Color(22, 36, 63));
+        brand.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        brand.setForeground(new java.awt.Color(255, 255, 255));
         brand.setText("Brand");
 
+        seatNo.setBackground(new java.awt.Color(22, 36, 63));
+        seatNo.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        seatNo.setForeground(new java.awt.Color(255, 255, 255));
         seatNo.setText("Seat No.");
 
+        city.setBackground(new java.awt.Color(22, 36, 63));
+        city.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        city.setForeground(new java.awt.Color(255, 255, 255));
         city.setText("City");
 
+        engineNo.setBackground(new java.awt.Color(22, 36, 63));
+        engineNo.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        engineNo.setForeground(new java.awt.Color(255, 255, 255));
         engineNo.setText("Engine No.");
 
+        modelNum.setBackground(new java.awt.Color(22, 36, 63));
+        modelNum.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        modelNum.setForeground(new java.awt.Color(255, 255, 255));
         modelNum.setText("Model No.");
 
+        model.setBackground(new java.awt.Color(22, 36, 63));
+        model.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        model.setForeground(new java.awt.Color(255, 255, 255));
         model.setText("Model");
 
+        year.setBackground(new java.awt.Color(22, 36, 63));
+        year.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        year.setForeground(new java.awt.Color(255, 255, 255));
         year.setText("Year");
 
+        available.setBackground(new java.awt.Color(22, 36, 63));
+        available.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        available.setForeground(new java.awt.Color(255, 255, 255));
         available.setText("Available");
 
+        maintainenceExpiry.setBackground(new java.awt.Color(22, 36, 63));
+        maintainenceExpiry.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        maintainenceExpiry.setForeground(new java.awt.Color(255, 255, 255));
         maintainenceExpiry.setText("Maintainence Expiry");
 
+        serialNum.setBackground(new java.awt.Color(22, 36, 63));
+        serialNum.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        serialNum.setForeground(new java.awt.Color(255, 255, 255));
         serialNum.setText("Serial No.");
 
+        licencePlate.setBackground(new java.awt.Color(22, 36, 63));
+        licencePlate.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        licencePlate.setForeground(new java.awt.Color(255, 255, 255));
         licencePlate.setText("Licence Plate");
 
         txtBrand.addActionListener(new java.awt.event.ActionListener() {
@@ -168,11 +201,17 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        title.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
+        title.setBackground(new java.awt.Color(22, 36, 63));
+        title.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        title.setForeground(new java.awt.Color(255, 255, 255));
         title.setText("Create Car Record");
 
+        color.setBackground(new java.awt.Color(22, 36, 63));
+        color.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        color.setForeground(new java.awt.Color(255, 255, 255));
         color.setText("Color");
 
+        btnSave.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +219,9 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        jCheckBox1.setBackground(new java.awt.Color(22, 36, 63));
+        jCheckBox1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setText("Yes");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,10 +229,19 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        jCheckBox2.setBackground(new java.awt.Color(22, 36, 63));
+        jCheckBox2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox2.setText("No");
 
+        jCheckBox3.setBackground(new java.awt.Color(22, 36, 63));
+        jCheckBox3.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jCheckBox3.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox3.setText("Yes");
 
+        jCheckBox4.setBackground(new java.awt.Color(22, 36, 63));
+        jCheckBox4.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jCheckBox4.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox4.setText("No");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -248,7 +299,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                                 .addComponent(jCheckBox3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jCheckBox4)))))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -297,7 +348,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                     .addComponent(jCheckBox4))
                 .addGap(58, 58, 58)
                 .addComponent(btnSave)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -54,8 +54,15 @@ public class SearchJPanel extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
         Output = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(22, 36, 63));
+        setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
+
+        title.setBackground(new java.awt.Color(22, 36, 63));
+        title.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        title.setForeground(new java.awt.Color(255, 255, 255));
         title.setText("Search");
 
+        btnFirstAvailableCar.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnFirstAvailableCar.setText("Find the first available passenger car");
         btnFirstAvailableCar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +70,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnCurrentAval.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnCurrentAval.setText("How many cars are currently available");
         btnCurrentAval.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +78,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnFilterByBrand.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnFilterByBrand.setText("List all cars that are made by Toyota and GM");
         btnFilterByBrand.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +86,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnFilterByYear.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnFilterByYear.setText("List all cars that were manufactured in a given year, ‘x’");
         btnFilterByYear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +94,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnFilterBySeat.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnFilterBySeat.setText("List all cars with a minimum of x seats but no more than y seats");
         btnFilterBySeat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +102,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnFilterBySerial.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnFilterBySerial.setText("Find a car with the given serial number");
         btnFilterBySerial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +110,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnFilterByModelNum.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnFilterByModelNum.setText("List all cars given the model number");
         btnFilterByModelNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +118,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnFilterByManufacturer.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnFilterByManufacturer.setText("List all the car manufacturers used by (this) Uber");
         btnFilterByManufacturer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +126,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnLastUpdated.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnLastUpdated.setText("When was the last time the fleet catalog was updated");
         btnLastUpdated.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +134,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnFilterByCity.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnFilterByCity.setText("List all cars that are available in a given city");
         btnFilterByCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +142,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnAllRecords.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnAllRecords.setText("List all cars that have expired maintenance certificates");
         btnAllRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,6 +150,8 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
+        jTable1.setBackground(new java.awt.Color(22, 36, 63));
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null},
@@ -154,32 +173,22 @@ public class SearchJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
             jTable1.getColumnModel().getColumn(0).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
             jTable1.getColumnModel().getColumn(1).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
             jTable1.getColumnModel().getColumn(2).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(3).setResizable(false);
             jTable1.getColumnModel().getColumn(3).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(4).setResizable(false);
             jTable1.getColumnModel().getColumn(4).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(5).setResizable(false);
             jTable1.getColumnModel().getColumn(5).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(6).setResizable(false);
             jTable1.getColumnModel().getColumn(6).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(7).setResizable(false);
             jTable1.getColumnModel().getColumn(7).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(8).setResizable(false);
             jTable1.getColumnModel().getColumn(8).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(9).setResizable(false);
             jTable1.getColumnModel().getColumn(9).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(10).setResizable(false);
             jTable1.getColumnModel().getColumn(10).setPreferredWidth(70);
-            jTable1.getColumnModel().getColumn(11).setResizable(false);
-            jTable1.getColumnModel().getColumn(11).setPreferredWidth(70);
         }
 
+        Output.setBackground(new java.awt.Color(22, 36, 63));
+        Output.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        Output.setForeground(new java.awt.Color(255, 255, 255));
         Output.setText("Output");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -188,8 +197,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Output)
                     .addComponent(title)
                     .addGroup(layout.createSequentialGroup()
@@ -197,21 +205,18 @@ public class SearchJPanel extends javax.swing.JPanel {
                             .addComponent(btnFirstAvailableCar)
                             .addComponent(btnFilterByYear)
                             .addComponent(btnFilterByModelNum)
-                            .addComponent(btnFilterByCity))
+                            .addComponent(btnFilterByCity)
+                            .addComponent(btnFilterByBrand)
+                            .addComponent(btnLastUpdated))
                         .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnCurrentAval)
-                                    .addComponent(btnFilterBySeat)
-                                    .addComponent(btnFilterByManufacturer))
-                                .addGap(50, 50, 50)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnLastUpdated)
-                                    .addComponent(btnFilterBySerial)
-                                    .addComponent(btnFilterByBrand)))
-                            .addComponent(btnAllRecords))))
-                .addContainerGap())
+                            .addComponent(btnCurrentAval)
+                            .addComponent(btnFilterBySeat)
+                            .addComponent(btnFilterByManufacturer)
+                            .addComponent(btnAllRecords)
+                            .addComponent(btnFilterBySerial)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1353, Short.MAX_VALUE))
+                .addGap(50, 50, 50))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,27 +226,30 @@ public class SearchJPanel extends javax.swing.JPanel {
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnFirstAvailableCar)
-                    .addComponent(btnCurrentAval)
-                    .addComponent(btnFilterByBrand))
+                    .addComponent(btnCurrentAval))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnFilterByYear)
-                    .addComponent(btnFilterBySeat)
-                    .addComponent(btnFilterBySerial))
+                    .addComponent(btnFilterBySeat))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnFilterByModelNum)
-                    .addComponent(btnFilterByManufacturer)
-                    .addComponent(btnLastUpdated))
+                    .addComponent(btnFilterByManufacturer))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnFilterByCity)
                     .addComponent(btnAllRecords))
-                .addGap(50, 50, 50)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnFilterBySerial)
+                    .addComponent(btnFilterByBrand))
+                .addGap(18, 18, 18)
+                .addComponent(btnLastUpdated)
+                .addGap(70, 70, 70)
                 .addComponent(Output)
-                .addGap(45, 45, 45)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addGap(50, 50, 50)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 

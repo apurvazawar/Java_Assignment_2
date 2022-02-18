@@ -4,6 +4,7 @@
  */
 package ui;
 
+import javax.swing.JFileChooser;
 import model.Car;
 import model.CarList;
 
@@ -40,9 +41,14 @@ public class MainFrame extends javax.swing.JFrame {
         btnCreate = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
+        icon = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         WorkPane = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        ControlPane.setBackground(new java.awt.Color(22, 36, 63));
+        ControlPane.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
 
         btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -65,29 +71,44 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Icon-72.png"))); // NOI18N
+        icon.setText("jLabel1");
+        icon.setBounds(new java.awt.Rectangle(-32741, -32666, 50, 50));
+
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("UBER");
+
         javax.swing.GroupLayout ControlPaneLayout = new javax.swing.GroupLayout(ControlPane);
         ControlPane.setLayout(ControlPaneLayout);
         ControlPaneLayout.setHorizontalGroup(
             ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ControlPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btnSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCreate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(50, 50, 50)
+                .addGroup(ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(icon, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCreate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(50, 50, 50))
         );
         ControlPaneLayout.setVerticalGroup(
             ControlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ControlPaneLayout.createSequentialGroup()
-                .addGap(174, 174, 174)
+                .addGap(38, 38, 38)
+                .addComponent(icon)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(150, 150, 150)
                 .addComponent(btnCreate)
-                .addGap(50, 50, 50)
+                .addGap(40, 40, 40)
                 .addComponent(btnUpdate)
-                .addGap(50, 50, 50)
+                .addGap(40, 40, 40)
                 .addComponent(btnSearch)
-                .addContainerGap(320, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(ControlPane);
@@ -96,7 +117,7 @@ public class MainFrame extends javax.swing.JFrame {
         WorkPane.setLayout(WorkPaneLayout);
         WorkPaneLayout.setHorizontalGroup(
             WorkPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 788, Short.MAX_VALUE)
+            .addGap(0, 718, Short.MAX_VALUE)
         );
         WorkPaneLayout.setVerticalGroup(
             WorkPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,6 +199,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnCreate;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel icon;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSplitPane splitPane;
     // End of variables declaration//GEN-END:variables
 }

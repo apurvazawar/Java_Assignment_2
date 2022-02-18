@@ -72,26 +72,62 @@ public class UpdateJPanel extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
         btnView = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(22, 36, 63));
+        setForeground(new java.awt.Color(255, 255, 255));
+
+        brand.setBackground(new java.awt.Color(22, 36, 63));
+        brand.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        brand.setForeground(new java.awt.Color(255, 255, 255));
         brand.setText("Brand");
 
+        seatNo.setBackground(new java.awt.Color(22, 36, 63));
+        seatNo.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        seatNo.setForeground(new java.awt.Color(255, 255, 255));
         seatNo.setText("Seat No.");
 
+        city.setBackground(new java.awt.Color(22, 36, 63));
+        city.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        city.setForeground(new java.awt.Color(255, 255, 255));
         city.setText("City");
 
+        engineNo.setBackground(new java.awt.Color(22, 36, 63));
+        engineNo.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        engineNo.setForeground(new java.awt.Color(255, 255, 255));
         engineNo.setText("Engine No.");
 
+        modelNum.setBackground(new java.awt.Color(22, 36, 63));
+        modelNum.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        modelNum.setForeground(new java.awt.Color(255, 255, 255));
         modelNum.setText("Model No.");
 
+        model.setBackground(new java.awt.Color(22, 36, 63));
+        model.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        model.setForeground(new java.awt.Color(255, 255, 255));
         model.setText("Model");
 
+        year.setBackground(new java.awt.Color(22, 36, 63));
+        year.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        year.setForeground(new java.awt.Color(255, 255, 255));
         year.setText("Year");
 
+        available.setBackground(new java.awt.Color(22, 36, 63));
+        available.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        available.setForeground(new java.awt.Color(255, 255, 255));
         available.setText("Available");
 
+        maintainenceExpiry.setBackground(new java.awt.Color(22, 36, 63));
+        maintainenceExpiry.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        maintainenceExpiry.setForeground(new java.awt.Color(255, 255, 255));
         maintainenceExpiry.setText("Maintainence Expiry");
 
+        serialNum.setBackground(new java.awt.Color(22, 36, 63));
+        serialNum.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        serialNum.setForeground(new java.awt.Color(255, 255, 255));
         serialNum.setText("Serial No.");
 
+        licencePlate.setBackground(new java.awt.Color(22, 36, 63));
+        licencePlate.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        licencePlate.setForeground(new java.awt.Color(255, 255, 255));
         licencePlate.setText("Licence Plate");
 
         txtBrand.addActionListener(new java.awt.event.ActionListener() {
@@ -106,10 +142,17 @@ public class UpdateJPanel extends javax.swing.JPanel {
             }
         });
 
+        title.setBackground(new java.awt.Color(22, 36, 63));
+        title.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        title.setForeground(new java.awt.Color(255, 255, 255));
         title.setText("View Car Record");
 
+        color.setBackground(new java.awt.Color(22, 36, 63));
+        color.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        color.setForeground(new java.awt.Color(255, 255, 255));
         color.setText("Color");
 
+        btnUpdate.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +160,9 @@ public class UpdateJPanel extends javax.swing.JPanel {
             }
         });
 
+        jCheckBox1.setBackground(new java.awt.Color(22, 36, 63));
+        jCheckBox1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setText("Yes");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,12 +170,24 @@ public class UpdateJPanel extends javax.swing.JPanel {
             }
         });
 
+        jCheckBox2.setBackground(new java.awt.Color(22, 36, 63));
+        jCheckBox2.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox2.setText("No");
 
+        jCheckBox3.setBackground(new java.awt.Color(22, 36, 63));
+        jCheckBox3.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jCheckBox3.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox3.setText("Yes");
 
+        jCheckBox4.setBackground(new java.awt.Color(22, 36, 63));
+        jCheckBox4.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jCheckBox4.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox4.setText("No");
 
+        jTable1.setBackground(new java.awt.Color(22, 36, 63));
+        jTable1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.gray));
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null},
@@ -151,6 +209,7 @@ public class UpdateJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
+        btnView.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         btnView.setText("View Car");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +223,7 @@ public class UpdateJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(brand)
@@ -218,7 +277,7 @@ public class UpdateJPanel extends javax.swing.JPanel {
                                     .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addComponent(title)
                     .addComponent(jScrollPane1))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addGap(50, 50, 50))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -320,19 +379,6 @@ public class UpdateJPanel extends javax.swing.JPanel {
         DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
         
         int selectedRowIndex = jTable1.getSelectedRow();
-
-//        String brand = tableModel.getValueAt(selectedRowIndex, 0).toString();
-//        String modelName = tableModel.getValueAt(selectedRowIndex, 1).toString();
-//        String color = tableModel.getValueAt(selectedRowIndex, 2).toString();
-//        String year = tableModel.getValueAt(selectedRowIndex, 3).toString();
-//        String seatNo = tableModel.getValueAt(selectedRowIndex, 4).toString();
-//        String city = tableModel.getValueAt(selectedRowIndex, 5).toString();
-//        String engineNo = tableModel.getValueAt(selectedRowIndex, 6).toString();
-//        String licensePlate = tableModel.getValueAt(selectedRowIndex, 7).toString();
-//        String serialNum = tableModel.getValueAt(selectedRowIndex, 8).toString();
-//        String modelNum = tableModel.getValueAt(selectedRowIndex, 9).toString();
-//        String maintainenceExpiry = tableModel.getValueAt(selectedRowIndex, 10).toString();
-//        String available = tableModel.getValueAt(selectedRowIndex, 11).toString();
         
         Car cd = new Car();
         
@@ -392,14 +438,14 @@ public class UpdateJPanel extends javax.swing.JPanel {
             saveCar=false;
         }
         
-        if(txtSerialNum.getText().length() > 0 && isAlphabetOrDigits(txtSerialNum.getText()) && txtSerialNum.getText().length() > 2 && txtSerialNum.getText().length() < 5){
+        if(txtSerialNum.getText().length() > 0 && isAlphabetOrDigits(txtSerialNum.getText()) && txtSerialNum.getText().length() > 11 && txtSerialNum.getText().length() < 18){
             cd.setSerialNum(txtSerialNum.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter correct Serial number!");
             saveCar=false;
         }
             
-        if(txtModelNum.getText().length() > 0 && isAlphabetOrDigits(txtModelNum.getText()) && txtModelNum.getText().length() == 4){
+        if(txtModelNum.getText().length() > 0 && isAlphabetOrDigits(txtModelNum.getText()) && txtModelNum.getText().length() == 17){
             cd.setModelNum(txtModelNum.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter 17 digit Model number!");
@@ -497,10 +543,16 @@ public class UpdateJPanel extends javax.swing.JPanel {
         if(maintainenceExpiryChkBx.equalsIgnoreCase("yes")){
             jCheckBox1.setSelected(true);
             jCheckBox2.setSelected(false);
+        } else {
+            jCheckBox1.setSelected(false);
+            jCheckBox2.setSelected(true);
         }
         if(availableChkBx.equalsIgnoreCase("yes")){
             jCheckBox3.setSelected(true);
             jCheckBox4.setSelected(false);
+        } else {
+            jCheckBox3.setSelected(false);
+            jCheckBox4.setSelected(true);
         }
     }//GEN-LAST:event_btnViewActionPerformed
 
