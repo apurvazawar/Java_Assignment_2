@@ -36,6 +36,7 @@ public class CarList {
         String today = formatter.format(new Date());
         carRecord.setTimestamp(today);
         lastUpdated = today;
+        
         if(isNewCar){
             history.add(carRecord);
         } else {

@@ -36,14 +36,59 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtYear.setText("2014");
         txtSeatNo.setText("4");
         txtCity.setText("Boston");
-        txtEngineNo.setText("123qwe");
-        txtLicencePlate.setText("qaw212");
-        txtSerialNum.setText("2222");
-        txtModelNum.setText("1111");
+        txtEngineNo.setText("123QWE");
+        txtLicencePlate.setText("BWE212");
+        txtSerialNum.setText("2222EHDG67UJ");
+        txtModelNum.setText("1111ksdfgbty6783k");
         jCheckBox1.setSelected(true);
         jCheckBox2.setSelected(false);
         jCheckBox3.setSelected(true);
         jCheckBox4.setSelected(false);
+        
+        Car newCar1 = new Car();
+        newCar1.setBrand("Toyota");
+        newCar1.setModel("Sienna");
+        newCar1.setCity("Boston");
+        newCar1.setColor("Red");
+        newCar1.setEngineNo("512FWB");
+        newCar1.setLicensePlate("512FWB");
+        newCar1.setMaintainenceExpiry("Yes");
+        newCar1.setYear(1999);
+        newCar1.setModelNum("ABQ11111111PPPPPP");
+        newCar1.setSeatsNo(4);
+        newCar1.setSerialNum("QWERTYUIOPASDFG");
+        newCar1.setAvailable("No");
+        history.addNewCar(true, 0, newCar1);
+        
+        Car newCar2 = new Car();
+        newCar2.setBrand("Ferrai");
+        newCar2.setModel("Prtofino");
+        newCar2.setCity("Seattle");
+        newCar2.setColor("Blue");
+        newCar2.setEngineNo("EBEJ9893NDN");
+        newCar2.setLicensePlate("786HJK");
+        newCar2.setMaintainenceExpiry("YES");
+        newCar2.setYear(2020);
+        newCar2.setModelNum("ASDFGHJKLPOIU0987");
+        newCar2.setSeatsNo(7);
+        newCar2.setSerialNum("1QWER56YFGHNSL2");
+        newCar2.setAvailable("YES");
+        history.addNewCar(true, 0, newCar2);
+        
+        Car newCar3 = new Car();
+        newCar3.setBrand("Mercedes");
+        newCar3.setModel("E-class");
+        newCar3.setCity("Chicago");
+        newCar3.setColor("Black");
+        newCar3.setEngineNo("DNU3ENH23NE");
+        newCar3.setLicensePlate("IOP123");
+        newCar3.setMaintainenceExpiry("YES");
+        newCar3.setYear(1997);
+        newCar3.setModelNum("WSDY76HNKLE34HNK9");
+        newCar3.setSeatsNo(4);
+        newCar3.setSerialNum("WDGY7UJK4TGD32O");
+        newCar3.setAvailable("YES");
+        history.addNewCar(true, 0, newCar3);
     }
 
     /**
@@ -84,6 +129,11 @@ public class CreateJPanel extends javax.swing.JPanel {
         jCheckBox3 = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+        setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.gray, java.awt.Color.white, java.awt.Color.darkGray, java.awt.Color.lightGray));
+        setForeground(new java.awt.Color(102, 102, 102));
+        setToolTipText("");
+
         brand.setText("Brand");
 
         seatNo.setText("Seat No.");
@@ -118,6 +168,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        title.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
         title.setText("Create Car Record");
 
         color.setText("Color");
@@ -197,7 +248,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                                 .addComponent(jCheckBox3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jCheckBox4)))))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,7 +297,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                     .addComponent(jCheckBox4))
                 .addGap(58, 58, 58)
                 .addComponent(btnSave)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -354,14 +405,14 @@ public class CreateJPanel extends javax.swing.JPanel {
             saveCar=false;
         }
         
-        if(txtSerialNum.getText().length() > 0 && isAlphabetOrDigits(txtSerialNum.getText()) && txtSerialNum.getText().length() > 2 && txtSerialNum.getText().length() < 5){
+        if(txtSerialNum.getText().length() > 0 && isAlphabetOrDigits(txtSerialNum.getText()) && txtSerialNum.getText().length() > 11 && txtSerialNum.getText().length() < 18){
             carDetails.setSerialNum(txtSerialNum.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter correct Serial number!");
             saveCar=false;
         }
             
-        if(txtModelNum.getText().length() > 0 && isAlphabetOrDigits(txtModelNum.getText()) && txtModelNum.getText().length() == 4){
+        if(txtModelNum.getText().length() > 0 && isAlphabetOrDigits(txtModelNum.getText()) && txtModelNum.getText().length() == 17){
             carDetails.setModelNum(txtModelNum.getText());
         } else {
             JOptionPane.showMessageDialog(null,"Please enter 17 digit Model number!");
