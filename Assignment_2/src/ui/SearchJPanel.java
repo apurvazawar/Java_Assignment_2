@@ -245,11 +245,11 @@ public class SearchJPanel extends javax.swing.JPanel {
                     .addComponent(btnFilterByBrand))
                 .addGap(18, 18, 18)
                 .addComponent(btnLastUpdated)
-                .addGap(70, 70, 70)
+                .addGap(50, 50, 50)
                 .addComponent(Output)
                 .addGap(50, 50, 50)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70))
         );
     }// </editor-fold>//GEN-END:initComponents
 
